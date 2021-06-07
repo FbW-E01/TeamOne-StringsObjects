@@ -1,4 +1,4 @@
-## Project
+# Team One Programming Basic Project
 
 ### String
 
