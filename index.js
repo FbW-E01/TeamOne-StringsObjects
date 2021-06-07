@@ -1,6 +1,14 @@
 // 1 Write a JavaScript function to truncate a string to a certain number of words.
 
 // 2 Write a JavaScript function to alphabetize a given string.
+const alphabetize_string = (string) => {
+    lettersArray = string.split('');
+    lettersArray.sort(function(a, b){
+        if(a.toLowerCase() < b.toLowerCase()) { return -1; }
+        if(a.toLowerCase() > b.toLowerCase()) { return 1; }
+    })
+    return lettersArray.join('');
+}
 
 // 3 Write a JavaScript function to convert ASCII to Hexadecimal format.
 
