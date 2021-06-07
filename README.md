@@ -97,9 +97,9 @@ console.log(num_string_range("a", "z", 2));
 9. Write a JavaScript function to print all the methods in an JavaScript object.
 
 ```js
-console.log(all_properties(Array));
+console.log(all_methods(Array));
 ["isArray", "from", "of"]
-console.log(all_properties(Math));
+console.log(all_methods(Math));
 ["abs", "acos", "acosh", "asin", "asinh", "atan", "atanh", "atan2", "ceil", "cbrt", "expm1", "clz32", "cos", "cosh", "exp", "floor", "fround", "hypot", "imul", "log", "log1p", "log2", "log10", "max", "min", "pow", "random", "round", "sign", "sin", "sinh", "sqrt", "tan", "tanh", "trunc"]
 
 ```
