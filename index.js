@@ -13,6 +13,14 @@
 // 6 Write a JavaScript function to sort the following array of objects by title value.
 
 // 7 Write a JavaScript function to fill an array with values (numeric, string with one character) on supplied bounds.
+function num_string_range(bound1, bound2,number) {
+    let a = [], i = bound1.charCodeAt(0), j = bound2.charCodeAt(0);
+    for (; i <= j; i += number) {
+        a.push(String.fromCharCode(i));
+    }
+    return a;
+}
+console.log(num_string_range("a","z",6))
 
 // 8 Write a JavaScript program to create a Clock. Note: The output will come every second.
 
