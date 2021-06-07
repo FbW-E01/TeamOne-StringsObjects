@@ -47,6 +47,11 @@ const clock = () => {
 }
 
 // 9 Write a JavaScript function to print all the methods in an JavaScript object.
+const all_methods = (input) => {
+    const allProperties = Object.getOwnPropertyNames(input);
+    const retArray = allProperties.filter(item => typeof input[item] === 'function');
+    return retArray;
+}
 
 // 10 Write a JavaScript function to print all the properties in an JavaScript object.
 const all_properties = (input) => {
