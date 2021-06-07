@@ -19,7 +19,7 @@ console.log(truncate(str1, 5)); // => "The quick brown fox jumps…"
 function ascii_to_hexa(str) {
     let arrStorage = [];
     for (let i = 0; i < str.length; i++) {
-        const hexa = +str.codePointAt(i).toString(16);
+        const hexa = Number(str.codePointAt(i)).toString(16);
         arrStorage.push(hexa);
     }
     return arrStorage.join("");
@@ -27,6 +27,8 @@ function ascii_to_hexa(str) {
 
 console.log(ascii_to_hexa("12")); //3132
 console.log(ascii_to_hexa("100")); //313030
+
+console.log();
 
 // 4 Write a JavaScript function to get humanized number with the correct suffix such as 1st, 2nd, 3rd or 4th.r
 
