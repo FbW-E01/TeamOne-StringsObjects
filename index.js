@@ -38,7 +38,17 @@ const humanize = (number) => {
 // 7 Write a JavaScript function to fill an array with values (numeric, string with one character) on supplied bounds.
 
 // 8 Write a JavaScript program to create a Clock. Note: The output will come every second.
+const clock = () => {
+    const printDate = () => {
+        let date = `${new Date()}`;
+        console.log(date.slice(16, 24));
+    }
+    setInterval(printDate, 999.8);
+}
 
 // 9 Write a JavaScript function to print all the methods in an JavaScript object.
 
 // 10 Write a JavaScript function to print all the properties in an JavaScript object.
+const all_properties = (input) => {
+    return Object.getOwnPropertyNames(input);
+}
