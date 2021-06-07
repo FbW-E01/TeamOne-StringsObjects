@@ -13,6 +13,21 @@ const alphabetize_string = (string) => {
 // 3 Write a JavaScript function to convert ASCII to Hexadecimal format.
 
 // 4 Write a JavaScript function to get humanized number with the correct suffix such as 1st, 2nd, 3rd or 4th.r
+const humanize = (number) => {
+    if (number % 1 !== 0 || typeof number !== 'number') {
+        return 'Invalid input';
+    }
+    switch (number.toFixed().slice(-1)){
+        case '1':
+            return `${number}st`;
+        case '2':
+            return `${number}nd`;
+        case '3':
+            return `${number}rd`;
+        default:
+            return `${number}th`;
+    }
+}
 
 // 5 Write a JavaScript function to get the successor of a string.
 
