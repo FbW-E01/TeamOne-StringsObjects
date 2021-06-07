@@ -50,10 +50,6 @@ const clock = () => {
     setInterval(printDate, 999.8);
 }
 // 9 Write a JavaScript function to print all the methods in an JavaScript object.
-const all_methods = (input) => {
-    Object.getOwnPropertyNames(input); // filter this
-
-}
 
 // 10 Write a JavaScript function to print all the properties in an JavaScript object.
 const all_properties = (input) => Object.getOwnPropertyNames(input);
