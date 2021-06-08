@@ -1,4 +1,4 @@
-git //import functions from index
+//import functions from index
 import { 
     sorted,
     num_string_range,

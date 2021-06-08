@@ -1,20 +1,22 @@
 # Team One Programming Basic Project
 
-### String
+This project has a library of functions. It is divided in two sets of functions, **String functions** and **Object functions** that are stored in the files **String.mjs** and **Object.mjs** respectively.
 
-1. Write a JavaScript function to truncate a string to a certain number of words.
+## String functions:
+
+1. Function to truncate a string to a certain number of words:
 
 ```js
 console.log(truncate("The quick brown fox jumps over the lazy dog", 4)); // "The quick brown fox"
 ```
 
-2. Write a JavaScript function to alphabetize a given string.
+2. Function to alphabetize a given string:
 
 - Note : Alphabetize string : An individual string can be alphabetized. This rearranges the letters so they are sorted A to Z.
 
 ```js
 console.log(alphabetize_string("United States"));
-//"SUadeeinsttt"
+//"adeeinsStttU"
 ```
 
 3. Write a JavaScript function to convert ASCII to Hexadecimal format.
@@ -44,7 +46,7 @@ string.successor("1999zzz"); // "2000aaa"
 string.successor("ZZZ9999"); // "AAAA0000"
 ```
 
-### Object
+## Object functions:
 
 6. Write a JavaScript function to sort the following array of objects by title value.
 
