@@ -82,19 +82,7 @@ console.log(num_string_range("a", "z", 2));
 // ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
 ```
 
-8. Function to start a Clock and output every second:
-
-```js
-"14:37:42";
-"14:37:43";
-"14:37:44";
-"14:37:45";
-"14:37:46";
-"14:37:47";
-
-```
-
-9. Function to print all the properties in an JavaScript object:
+8. Function to print all the properties in an JavaScript object:
 
 ```js
 console.log(all_properties(Math));
@@ -103,12 +91,24 @@ console.log(all_properties(Array));
 ["length", "name", "prototype", "isArray", "from", "of"]
 ```
 
-10. Function to print all the methods in an JavaScript object:
+9. Function to print all the methods in an JavaScript object:
 
 ```js
 console.log(all_methods(Array));
 ["isArray", "from", "of"]
 console.log(all_methods(Math));
 ["abs", "acos", "acosh", "asin", "asinh", "atan", "atanh", "atan2", "ceil", "cbrt", "expm1", "clz32", "cos", "cosh", "exp", "floor", "fround", "hypot", "imul", "log", "log1p", "log2", "log10", "max", "min", "pow", "random", "round", "sign", "sin", "sinh", "sqrt", "tan", "tanh", "trunc"]
+
+```
+
+10. Function to start a Clock and output every second:
+
+```js
+"14:37:42";
+"14:37:43";
+"14:37:44";
+"14:37:45";
+"14:37:46";
+"14:37:47";
 
 ```
