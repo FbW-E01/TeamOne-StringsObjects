@@ -62,7 +62,8 @@ export function successor(str) {
 
     while (i >= 0) {
         let last = str.charAt(--i),
-          next = "", index,
+            next = "",
+            index,
             carry = false;
 
         if (isNaN(last)) {

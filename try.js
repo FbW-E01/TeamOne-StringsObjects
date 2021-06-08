@@ -9,12 +9,10 @@ function successor(str) {
   while (i >= 0) {
     let last = str.charAt(--i),
       next = " ",
-      index,
+      // index,
       carry = false;
-      console.log(last);
+      
     
-    // console.log(isNaN(last));
-    // console.log(isNaN(last) || last === " ");
     if (isNaN(last)) {
       index = alphabet.indexOf(last.toLowerCase());
 
@@ -35,10 +33,7 @@ function successor(str) {
           break;
         }
       }
-    } else if (last === ' ') {
-      carry = true
-    }
-    else /* (last !== " ") */ {
+    } else if (last === " ") {
             next = +last + 1;
             if (next > 9) {
                 next = 0;
@@ -46,7 +41,7 @@ function successor(str) {
             }
 
             if (carry && i === 0) {
-              result = "1" + next + result.slice(1);
+              result = next + result.slice(1);
               break;
           
             }
@@ -61,10 +56,10 @@ function successor(str) {
 }
 
 
-// console.log(successor("abcd")); // "abce"
-// console.log(successor("THX1138")); // "THX1139"
-console.log(successor("<>")); // "< >"
-// console.log(successor("1999zzz ")); // "2000aaa"
-// console.log(successor("ZZZ9999 ")); // "AAAA0000"
-// console.log(successor("Z")); // "AAAA0000"
-// console.log(successor(" ")); // "AAAA0000"
+console.log(successor("abcd")); // "abce"
+console.log(successor("THX1138")); // "THX1139"
+console.log(successor("< >")); // "< >"
+console.log(successor("1999zzz")); // "2000aaa"
+console.log(successor("ZZZ9999")); // "AAAA0000"
+console.log(successor("Z ")); // "AAAA0000"
+console.log(successor(" ")); // "AAAA0000"
