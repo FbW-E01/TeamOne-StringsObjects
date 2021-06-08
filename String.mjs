@@ -1,7 +1,4 @@
 // 1 Write a JavaScript function to truncate a string to a certain number of words.
-const str1 = "The quick brown fox jumps over the lazy dog";
-const str2 = "Hello World";
-
 export function truncate(str, maxLength = 7) {
     let strToArray = str.split(" ");
     return strToArray.length > maxLength
