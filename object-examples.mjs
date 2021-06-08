@@ -1,4 +1,6 @@
-import { truncate } from "./index.mjs";
+
+
+
 // let val = hello(); // val is "Hello";
 const str1 = "The quick brown fox jumps over the lazy dog";
 const str2 = "Hello World";
