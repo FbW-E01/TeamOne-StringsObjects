@@ -47,7 +47,7 @@ string.successor("ZZZ9999"); // "AAAA0000"
 
 ## Object functions:
 
-6. Function to sort the following array of objects by title value.
+6. Function to sort the following array of objects by a given value.
 
 ```js
 var library = [
