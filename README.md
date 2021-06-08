@@ -1,7 +1,7 @@
 # Team One Programming Basic Project
 
 This project has a library of functions. It is divided in two sets of functions, **String functions** and **Object functions** that are stored in the files [**String.mjs**](./String.mjs) and [**Object.mjs**](./Object.mjs) respectively.
-Examples of usage are displayed in the files [**string-examples.mjs**](./string-examples.mjs), [**object-examples.mjs**](./object-examples.mjs), and [**run-clock.mjs**](./run-clock.mjs).
+Examples of usage are displayed in the files [**string-examples.mjs**](./string-examples.mjs) and [**object-examples.mjs**](./object-examples.mjs).
 
 ## String functions:
 
