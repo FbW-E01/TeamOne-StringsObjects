@@ -8,10 +8,6 @@ export function truncate(str, maxLength = 7) {
         ? strToArray.slice(0, maxLength).join(" ") + `…`
         : str;
 }
-console.log(truncate(str1)); // => "The quick brown fox jumps over the lazy…"
-console.log(truncate(str2)); // => "Hello World"
-console.log(truncate(str1, 3)); // => "The quick brown…"
-console.log(truncate(str1, 5)); // => "The quick brown fox jumps…"
 
 // 2 Write a JavaScript function to alphabetize a given string.
 export function alphabetize_string(string) {
@@ -38,7 +34,6 @@ export function ascii_to_hex(str) {
     }
     return arrStorage.join("");
 }
-
 
 // 4 Write a JavaScript function to get humanized number with the correct suffix such as 1st, 2nd, 3rd or 4th.r
 export function humanize(number) {
@@ -67,7 +62,7 @@ export function successor(str) {
 
     while (i >= 0) {
         let last = str.charAt(--i),
-            next = "",
+          next = "", index,
             carry = false;
 
         if (isNaN(last)) {

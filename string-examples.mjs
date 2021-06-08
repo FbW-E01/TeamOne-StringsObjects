@@ -1,12 +1,12 @@
-//import functions from String.mjs
+// import functions from String.mjs
 
 import {
     truncate,
     alphabetize_string,
     ascii_to_hex,
     humanize,
+    successor,
 } from "./String.mjs";
-import {} from "./String.mjs";
 
 /*
  
@@ -18,10 +18,12 @@ import {} from "./String.mjs";
      
  
 */
+
 const str1 = "The quick brown fox jumps over the lazy dog";
 const str2 = "Hello World";
 
 console.log(truncate(str1)); // => "The quick brown fox jumps over the lazy…"
+console.log(truncate(str2)); // => "Hello World"
 console.log(truncate(str1, 3)); // => "The quick brown…"
 console.log(truncate(str1, 5)); // => "The quick brown fox jumps…"
 
@@ -78,6 +80,7 @@ console.log(humanize(0));
          
  
 */
+
 
 console.log(successor("abcd")); // "abce"
 console.log(successor("THX1138")); // "THX1139"
