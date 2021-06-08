@@ -60,9 +60,9 @@ export function successor(str) {
         result = str,
         i = str.length;
 
-    while (i >= 0) {
+    while (i > 0) {
         let last = str.charAt(--i),
-            next = "",
+            next = " ",
             index,
             carry = false;
 
@@ -86,7 +86,12 @@ export function successor(str) {
                     break;
                 }
             }
+        } else if (last === " ") {
+            //console.log('last is " "');
+            next = last;
+            carry = true;
         } else {
+            //console.log('it happened', `"${last}"`);
             next = +last + 1;
             if (next > 9) {
                 next = 0;
@@ -100,6 +105,7 @@ export function successor(str) {
         }
 
         result = result.slice(0, i) + next + result.slice(i + 1);
+
         if (!carry) {
             break;
         }

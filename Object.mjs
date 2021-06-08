@@ -1,9 +1,9 @@
 // Object Functions
 
 // sort an array of objects by property value:
-export function sorted(obj, key) {
+export function sorted(array, key) {
     // sort by comparing a in index [1] with b in index [0] at 1st iteration.
-    return obj.sort((a, b) => 
+    return array.sort((a, b) => 
     String(a[key]).toLowerCase().codePointAt(0) - String(b[key]).toLowerCase().codePointAt(0));
 }
 var library = [
