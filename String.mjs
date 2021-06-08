@@ -14,8 +14,8 @@ console.log(truncate(str1, 3)); // => "The quick brown…"
 console.log(truncate(str1, 5)); // => "The quick brown fox jumps…"
 
 // 2 Write a JavaScript function to alphabetize a given string.
-function alphabetize_string(string) {
-    lettersArray = string.split(/['' ' ']*/);
+export function alphabetize_string(string) {
+    let lettersArray = string.split(/['' ' ']*/);
     lettersArray.sort(function (a, b) {
         if (a.toLowerCase() < b.toLowerCase()) {
             return -1;
@@ -29,7 +29,7 @@ function alphabetize_string(string) {
 
 // 3 Write a JavaScript function to convert ASCII to Hexadecimal format.
 
-function ascii_to_hex(str) {
+export function ascii_to_hex(str) {
     let arrStorage = [];
     for (let i = 0; i < str.length; i++) {
         // codePointAt(0): returns the UTF16 code for the characters at position 0
@@ -38,13 +38,10 @@ function ascii_to_hex(str) {
     }
     return arrStorage.join("");
 }
-console.log(ascii_to_hex("12")); // => 3132
-console.log(ascii_to_hex("100")); // => 313030
-console.log(ascii_to_hex("🧐")); // => 1f9d0ddd0;
-console.log("\u{1f9d0}"); // => 🧐
+
 
 // 4 Write a JavaScript function to get humanized number with the correct suffix such as 1st, 2nd, 3rd or 4th.r
-function humanize(number) {
+export function humanize(number) {
     if (number % 1 !== 0 || typeof number !== "number") {
         return "Invalid input";
     }
@@ -61,7 +58,8 @@ function humanize(number) {
 }
 
 // 5 Write a JavaScript function to get the successor of a string.
-function successor(str) {
+
+export function successor(str) {
     let alphabet = "abcdefghijklmnopqrstuvwxyz",
         length = alphabet.length,
         result = str,
@@ -112,6 +110,3 @@ function successor(str) {
     }
     return result;
 }
-
-console.log(successor("abcd"));
-console.log(successor("ZZZ9999"));
