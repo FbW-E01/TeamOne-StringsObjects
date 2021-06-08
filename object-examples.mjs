@@ -1,13 +1,27 @@
-
-
-
-// let val = hello(); // val is "Hello";
-const str1 = "The quick brown fox jumps over the lazy dog";
-const str2 = "Hello World";
-
 //import functions from index
-console.log(truncate(str1)); // => "The quick brown fox jumps over the lazy…"
-console.log(truncate(str1, 3)); // => "The quick brown…"
-console.log(truncate(str1, 5)); // => "The quick brown fox jumps…"
+import { 
+    sorted,
+    num_string_range,
+    all_properties,
+    all_methods 
+} from "./Object.mjs";
 
-// console.log(alphabetize_string("United States"));
+var library = [
+    { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
+    { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
+    {
+      author: "Suzanne Collins",
+      title: "Mockingjay: The Final Book of The Hunger Games",
+      libraryID: 3245,
+    },
+];
+
+console.log(sorted(library));
+
+console.log(num_string_range("a", "z", 6));
+
+console.log(all_properties(Math));
+console.log(all_properties(Array));
+
+console.log(all_methods(Array));
+console.log(all_methods(Math));
