@@ -20,14 +20,14 @@ console.log(alphabetize_string("United States"));
 //"adeeinsStttU"
 ```
 
-3. Function to convert ASCII to Hexadecimal format.
+3. Function to convert ASCII to Hexadecimal format:
 
 ```js
 console.log(ascii_to_hexa("12")); //3132
 console.log(ascii_to_hexa("100")); //313030
 ```
 
-4. Function to get humanized number with the correct suffix such as 1st, 2nd, 3rd or 4th.r
+4. Function to get humanized number with the correct suffix such as 1st, 2nd, 3rd or 4th:
 
 ```js
 console.log(humanize(1)); //"1st"
@@ -35,7 +35,7 @@ console.log(humanize(20)); //"20th"
 console.log(humanize(302)); //"302nd"
 ```
 
-5. Function to get the successor of a string.
+5. Function to get the successor of a string:
 
 ```js
 string.successor("abcd"); // "abce"
@@ -47,7 +47,7 @@ string.successor("ZZZ9999"); // "AAAA0000"
 
 ## Object functions:
 
-6. Function to sort the following array of objects by a given value.
+6. Function to sort the following array of objects by a given value:
 
 ```js
 var library = [
@@ -75,14 +75,14 @@ var library = [
 }]*/
 ```
 
-7. Function to fill an array with values (numeric, string with one character) on supplied bounds.
+7. Function to fill an array with values (numeric, string with one character) on supplied bounds:
 
 ```js
 console.log(num_string_range("a", "z", 2));
 // ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
 ```
 
-8. Function to start a Clock and output every second.
+8. Function to start a Clock and output every second:
 
 ```js
 "14:37:42";
@@ -94,7 +94,7 @@ console.log(num_string_range("a", "z", 2));
 
 ```
 
-9. Function to print all the properties in an JavaScript object.
+9. Function to print all the properties in an JavaScript object:
 
 ```js
 console.log(all_properties(Math));
@@ -103,7 +103,7 @@ console.log(all_properties(Array));
 ["length", "name", "prototype", "isArray", "from", "of"]
 ```
 
-10. Function to print all the methods in an JavaScript object.
+10. Function to print all the methods in an JavaScript object:
 
 ```js
 console.log(all_methods(Array));
