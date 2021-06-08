@@ -1,3 +1,5 @@
+//import functions from String.mjs
+
 import {
     truncate,
     alphabetize_string,
@@ -52,7 +54,6 @@ console.log(ascii_to_hex("100")); // => 313030
 console.log(ascii_to_hex("🧐")); // => 1f9d0ddd0;
 console.log("\u{1f9d0}"); // => 🧐
 
-
 /*
  
    _  _   
@@ -63,7 +64,6 @@ console.log("\u{1f9d0}"); // => 🧐
           
  
 */
-
 
 console.log(humanize(0));
 // console.log(humanize(12n));
@@ -78,7 +78,6 @@ console.log(humanize(0));
          
  
 */
-
 
 console.log(successor("abcd")); // "abce"
 console.log(successor("THX1138")); // "THX1139"
