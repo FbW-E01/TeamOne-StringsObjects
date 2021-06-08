@@ -10,13 +10,15 @@ var library = [
     { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
     { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
     {
-      author: "Suzanne Collins",
+      author: "suzanne Collins",
       title: "Mockingjay: The Final Book of The Hunger Games",
       libraryID: 3245,
     },
 ];
 
-console.log(sorted(library));
+console.log(sorted(library, 'title'));
+console.log(sorted(library, 'author'));
+console.log(sorted(library, 'libraryID'));
 
 console.log(num_string_range("a", "z", 6));
 

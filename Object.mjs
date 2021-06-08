@@ -1,10 +1,20 @@
 // Object Functions
 
-// sort an array of objects by title value:
-export function sorted(obj) {
+// sort an array of objects by property value:
+export function sorted(obj, key) {
     // sort by comparing a in index [1] with b in index [0] at 1st iteration.
-    return obj.sort((a, b) => a.title.codePointAt(0) - b.title.codePointAt(0));
+    return obj.sort((a, b) => 
+    String(a[key]).toLowerCase().codePointAt(0) - String(b[key]).toLowerCase().codePointAt(0));
 }
+var library = [
+    { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
+    { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
+    {
+      author: "Suzanne Collins",
+      title: "Mockingjay: The Final Book of The Hunger Games",
+      libraryID: 3245,
+    },
+];
 
 // fill an array with values on supplied bounds:
 export function num_string_range(bound1, bound2, number) {
