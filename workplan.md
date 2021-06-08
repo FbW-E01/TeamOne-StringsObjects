@@ -1,8 +1,8 @@
-- create branch and work on our branch.
-- every question we finished we commit and push.
-- we screen share review every ones code together.
-- meeting at the end of the day..
-- 
+- create branch and work on our branch. X
+- every question we finished we commit and push. X
+- we screen share review every ones code together. 
+- meeting at the end of the day.
+- change README.md file
 
 
 # String

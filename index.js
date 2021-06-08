@@ -163,7 +163,4 @@ const all_methods = (input) => {
 }
 
 // 10 Write a JavaScript function to print all the properties in an JavaScript object.
-<<<<<<< HEAD
 const all_properties = (input) => Object.getOwnPropertyNames(input);
-=======
->>>>>>> Sascha
