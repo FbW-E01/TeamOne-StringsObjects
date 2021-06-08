@@ -27,15 +27,6 @@ export function num_string_range(bound1, bound2, number) {
     return a;
 }
 
-// display the time every second:
-export function clock() {
-    const printDate = () => {
-        let date = `${new Date()}`;
-        console.log(date.slice(16, 24));
-    };
-    setInterval(printDate, 999.8);
-}
-
 // return all the properties in an JavaScript object:
 export function all_properties(input) {
     return Object.getOwnPropertyNames(input);
@@ -48,4 +39,13 @@ export function all_methods(input) {
         (item) => typeof input[item] === "function"
     );
     return retArray;
+}
+
+// display the time every second:
+export function clock() {
+    const printDate = () => {
+        let date = `${new Date()}`;
+        console.log(date.slice(16, 24));
+    };
+    setInterval(printDate, 999.8);
 }
