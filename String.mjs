@@ -34,7 +34,10 @@ export function ascii_to_hex(str) {
 
 // 4 Write a JavaScript function to get humanized number with the correct suffix such as 1st, 2nd, 3rd or 4th.r
 export function humanize(number) {
-    if (number % 1 !== 0 || typeof number !== "number") {
+    if (typeof number !== "number") {
+        return "Invalid input";
+    }
+    if (number % 1 !== 0) {
         return "Invalid input";
     }
     switch (number.toFixed().slice(-1)) {
