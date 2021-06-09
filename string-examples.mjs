@@ -67,8 +67,10 @@ console.log("\u{1f9d0}"); // => 🧐
  
 */
 
-console.log(humanize(0));
-// console.log(humanize(12n));
+console.log(humanize(10));
+console.log(humanize(3));
+console.log(humanize(12n));
+console.log(humanize('3rd'));
 
 /*
  
