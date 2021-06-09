@@ -6,6 +6,7 @@ import {
     ascii_to_hex,
     humanize,
     successor,
+    searchAndReplace,
 } from "./String.mjs";
 
 /*
@@ -89,3 +90,28 @@ console.log(successor("THX1138")); // "THX1139"
 console.log(successor("< >")); // "< >"
 console.log(successor("1999zzz")); // "2000aaa"
 console.log(successor("ZZZ9999")); // "AAAA0000"
+
+
+/*
+ 
+    __   
+   / /_  
+  | '_ \ 
+  | (_) |
+   \___/ 
+         
+ 
+*/
+
+let textOne = "Something Bla <h1> there, something {@} the";
+let textTwo = "Something 1 £ there, something the";
+
+console.log(searchAndReplace(textOne, "Bla", "Bleh"));
+console.log(searchAndReplace(textOne, "The", "This"));
+console.log(searchAndReplace(textOne, "The", "This", false, false));
+console.log(searchAndReplace(textOne, "the", "This", true, true));
+console.log(searchAndReplace(textOne, "bla", "bleh", true, true));
+console.log(searchAndReplace(textOne, "Bla", "Bleh", true, true));
+console.log(searchAndReplace(textTwo, "£", "Bleh", true, true));
+console.log(searchAndReplace(textTwo, "!", "Bleh"));
+console.log(searchAndReplace(textTwo, "1", "Bleh")); 

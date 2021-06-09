@@ -7,18 +7,16 @@ import {
     all_methods,
     clock,
 } from "./Object.mjs";
-
 /*
  
-    __   
-   / /_  
-  | '_ \ 
-  | (_) |
-   \___/ 
+   _____ 
+  |___  |
+     / / 
+    / /  
+   /_/   
          
  
 */
-
 var library = [
     { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
     { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
@@ -32,20 +30,6 @@ var library = [
 console.log(sorted(library, "title"));
 console.log(sorted(library, "author"));
 console.log(sorted(library, "libraryID"));
-
-/*
- 
-   _____ 
-  |___  |
-     / / 
-    / /  
-   /_/   
-         
- 
-*/
-
-console.log(num_string_range("a", "z", 6));
-
 /*
  
     ___  
@@ -56,10 +40,7 @@ console.log(num_string_range("a", "z", 6));
          
  
 */
-
-console.log(all_properties(Math));
-console.log(all_properties(Array));
-
+console.log(num_string_range("a", "z", 6));
 /*
  
     ___  
@@ -70,10 +51,8 @@ console.log(all_properties(Array));
          
  
 */
-
-console.log(all_methods(Array));
-console.log(all_methods(Math));
-
+console.log(all_properties(Math));
+console.log(all_properties(Array));
 /*
  
    _  ___  
@@ -84,5 +63,16 @@ console.log(all_methods(Math));
            
  
 */
-
+console.log(all_methods(Array));
+console.log(all_methods(Math));
+/*
+ 
+   _   _ 
+  / | / |
+  | | | |
+  | | | |
+  |_| |_|
+         
+ 
+*/
 clock();

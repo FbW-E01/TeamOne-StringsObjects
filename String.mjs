@@ -1,4 +1,4 @@
-// 1 Write a JavaScript function to truncate a string to a certain number of words.
+// 1 Function to truncate a string to a certain number of words:
 export function truncate(str, maxLength = 7) {
     let strToArray = str.split(" ");
     return strToArray.length > maxLength
@@ -6,7 +6,7 @@ export function truncate(str, maxLength = 7) {
         : str;
 }
 
-// 2 Write a JavaScript function to alphabetize a given string.
+// 2 Function to alphabetize a given string:
 export function alphabetize_string(string) {
     let lettersArray = string.split(/['' ' ']*/);
     lettersArray.sort(function (a, b) {
@@ -20,8 +20,7 @@ export function alphabetize_string(string) {
     return lettersArray.join("");
 }
 
-// 3 Write a JavaScript function to convert ASCII to Hexadecimal format.
-
+// 3 Function to convert ASCII to Hexadecimal format:
 export function ascii_to_hex(str) {
     let arrStorage = [];
     for (let i = 0; i < str.length; i++) {
@@ -32,7 +31,7 @@ export function ascii_to_hex(str) {
     return arrStorage.join("");
 }
 
-// 4 Write a JavaScript function to get humanized number with the correct suffix such as 1st, 2nd, 3rd or 4th.r
+// 4 Function to get humanized number with the correct suffix such as 1st, 2nd, 3rd or 4th:
 export function humanize(number) {
     if (typeof number !== "number") {
         return "Invalid input";
@@ -52,8 +51,7 @@ export function humanize(number) {
     }
 }
 
-// 5 Write a JavaScript function to get the successor of a string.
-
+// 5 Function to get the successor of a string:
 export function successor(str) {
     let alphabet = "abcdefghijklmnopqrstuvwxyz",
         length = alphabet.length,
@@ -111,4 +109,37 @@ export function successor(str) {
         }
     }
     return result;
+}
+
+// 6 Function to search and replace words in a string:
+export function searchAndReplace(
+    text,
+    toFind,
+    toAdd,
+    caseSensitive = false,
+    exactWord = true
+) {
+    let regEx;
+    // Special charachter check
+    let specialChar = /[!@#$€£%^&*(),.?":{}|<>]/;
+
+    // If there is a special character to be found search must be case insensitive and not exact word
+    if ((caseSensitive && !exactWord) || specialChar.test(toFind)) {
+        regEx = toFind;
+    // Default: If case insensitive and exact word
+    } else if (!caseSensitive && exactWord) {
+        regEx = new RegExp(`\\b${toFind}\\b`, "i");
+    // If case insensitive and not exact word
+    } else if (!caseSensitive && !exactWord) {
+        regEx = new RegExp(toFind, "i");
+    // If case sensitive and exact word
+    } else {
+        regEx = new RegExp(`\\b${toFind}\\b`);
+    }
+    // Check if word is present in the text
+    if (!text.match(regEx) === null) {
+        return "Not found!";
+    }
+
+    return text.split(regEx).join(toAdd);
 }
