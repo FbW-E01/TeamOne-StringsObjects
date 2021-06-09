@@ -1,6 +1,12 @@
 //import functions from Object.mjs
 
-import {sorted, num_string_range, all_properties, all_methods, clock,} from "./Object.mjs";
+import {
+    sorted,
+    num_string_range,
+    all_properties,
+    all_methods,
+    clock,
+} from "./Object.mjs";
 
 /*
  
