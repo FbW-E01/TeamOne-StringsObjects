@@ -56,7 +56,7 @@ console.log(searchAndReplace(textOne, "the", "This", true, true)); // Something 
 
 let textTwo = "Something 1 £ there, something the";
 console.log(searchAndReplace(textTwo, "£", "Bleh", true, true)); // Something 1 Bleh there, something the
-console.log(searchAndReplace(textTwo, "1", "Bleh")); // Something 1 £ there, something the
+console.log(searchAndReplace(textTwo, "1", "Bleh")); // Something Bleh £ there, something the
 ```
 
 ## Object functions:
