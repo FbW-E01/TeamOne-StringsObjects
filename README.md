@@ -45,9 +45,23 @@ string.successor("1999zzz"); // "2000aaa"
 string.successor("ZZZ9999"); // "AAAA0000"
 ```
 
+6. Function to search and replace words in a string:
+
+```js
+let textOne = "Something Bla <h1> there, something {@} the";
+console.log(searchAndReplace(textOne, "Bla", "Bleh")); // Something Bleh <h1> there, something {@} the
+console.log(searchAndReplace(textOne, "The", "This")); // Something Bla <h1> there, something {@} This
+console.log(searchAndReplace(textOne, "The", "This", false, false)); // Something Bla <h1> Thisre, something {@} This
+console.log(searchAndReplace(textOne, "the", "This", true, true)); // Something Bla <h1> there, something {@} This
+
+let textTwo = "Something 1 £ there, something the";
+console.log(searchAndReplace(textTwo, "£", "Bleh", true, true)); // Something 1 Bleh there, something the
+console.log(searchAndReplace(textTwo, "1", "Bleh")); // Something 1 £ there, something the
+```
+
 ## Object functions:
 
-6. Function to sort the following array of objects by a given value:
+7. Function to sort the following array of objects by a given value:
 
 ```js
 var library = [
@@ -75,14 +89,14 @@ var library = [
 }]*/
 ```
 
-7. Function to fill an array with values (numeric, string with one character) on supplied bounds:
+8. Function to fill an array with values (numeric, string with one character) on supplied bounds:
 
 ```js
 console.log(num_string_range("a", "z", 2));
 // ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
 ```
 
-8. Function to print all the properties in an JavaScript object:
+9. Function to print all the properties in an JavaScript object:
 
 ```js
 console.log(all_properties(Math));
@@ -91,7 +105,7 @@ console.log(all_properties(Array));
 ["length", "name", "prototype", "isArray", "from", "of"]
 ```
 
-9. Function to print all the methods in an JavaScript object:
+10. Function to print all the methods in an JavaScript object:
 
 ```js
 console.log(all_methods(Array));
@@ -101,7 +115,7 @@ console.log(all_methods(Math));
 
 ```
 
-10. Function to start a Clock and output every second:
+11. Function to start a Clock and output every second:
 
 ```js
 "14:37:42";
