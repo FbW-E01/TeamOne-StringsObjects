@@ -7,6 +7,8 @@ import {
     humanize,
     successor,
     searchAndReplace,
+    cryptoOne,
+    cryptoTwo,
 } from "./String.mjs";
 
 /*
@@ -52,6 +54,7 @@ console.log(alphabetize_string("United kingdom"));
          
  
 */
+
 console.log(ascii_to_hex("12")); // => 3132
 console.log(ascii_to_hex("100")); // => 313030
 console.log(ascii_to_hex("🧐")); // => 1f9d0ddd0;
@@ -84,13 +87,11 @@ console.log(humanize('3rd'));
  
 */
 
-
-console.log(successor("abcd")); // "abce"
-console.log(successor("THX1138")); // "THX1139"
-console.log(successor("< >")); // "< >"
-console.log(successor("1999zzz")); // "2000aaa"
-console.log(successor("ZZZ9999")); // "AAAA0000"
-
+console.log(successor("abcd"));
+console.log(successor("THX1138"));
+console.log(successor("< >"));
+console.log(successor("1999zzz"));
+console.log(successor("ZZZ9999"));
 
 /*
  
@@ -115,3 +116,40 @@ console.log(searchAndReplace(textOne, "Bla", "Bleh", true, true));
 console.log(searchAndReplace(textTwo, "£", "Bleh", true, true));
 console.log(searchAndReplace(textTwo, "!", "Bleh"));
 console.log(searchAndReplace(textTwo, "1", "Bleh")); 
+
+/*
+ 
+   _____ 
+  |___  |
+     / / 
+    / /  
+   /_/   
+         
+ 
+*/
+
+console.log(cryptoOne("Beta abcde", 1));
+console.log(cryptoOne("Cfub bcdef", -1));
+console.log(cryptoOne("Beta abcde", 52));
+console.log(cryptoOne("André Lorenzoni", 102));
+console.log(cryptoOne("Ylbpŏ Jmpclxmlg", -102));
+console.log(cryptoOne("íslenska, Móðir ekki veit ég það", 4));
+console.log(cryptoOne("ñwpirwoe, Q÷ômv ioom zimx ík Ăeô", -4));
+console.log(cryptoOne("Yinelea macı, sürekli dağılımı sağlayarak.", -40)); 
+console.log(cryptoOne("Kuzqxqm ymoĉ, eÔdqwxu pm÷ĉxĉyĉ em÷xmkmdmw.", 40)); 
+
+/*
+
+   ___  
+  ( _ ) 
+  / _ \ 
+ | (_) |
+  \___/ 
+        
+
+*/
+
+console.log(cryptoTwo("Hello world"));
+console.log(cryptoTwo("ሸጀፈፈኟዟጿኟዷፈደ", true));
+console.log(cryptoTwo("Lorem Ipsum dolor sit ame."));
+console.log(cryptoTwo("ቯኟዷጀፐዟቀኧጇጯፐዟደኟፈኟዷዟጇጰጧዟዠፐጀ?", true));

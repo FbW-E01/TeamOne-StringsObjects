@@ -59,9 +59,32 @@ console.log(searchAndReplace(textTwo, "£", "Bleh", true, true)); // Something 1
 console.log(searchAndReplace(textTwo, "1", "Bleh")); // Something Bleh £ there, something the
 ```
 
+7. Function to encrypt or decrypt a text using a key that shifts the letter by the given key amount:
+
+```js
+console.log(cryptoOne("Beta abcde", 1)); // Cfub bcdef
+console.log(cryptoOne("Cfub bcdef", -1)); // Beta abcde
+console.log(cryptoOne("Beta abcde", 52)); // Beta abcde
+console.log(cryptoOne("André Lorenzoni", 102)); // Ylbpŏ Jmpclxmlg
+console.log(cryptoOne("Ylbpŏ Jmpclxmlg", -102)); // André Lorenzoni
+console.log(cryptoOne("íslenska, Móðir ekki veit ég það", 4)); // ñwpirwoe, Q÷ômv ioom zimx ík Ăeô
+console.log(cryptoOne("ñwpirwoe, Q÷ômv ioom zimx ík Ăeô", -4)); // íslenska, Móðir ekki veit ég það
+console.log(cryptoOne("Yinelea macı, sürekli dağılımı sağlayarak.", -40)); // Kuzqxqm ymoĉ, eÔdqwxu pm÷ĉxĉyĉ em÷xmkmdmw.
+console.log(cryptoOne("Kuzqxqm ymoĉ, eÔdqwxu pm÷ĉxĉyĉ em÷xmkmdmw.", 40)); // Yinelea macı, sürekli dağılımı sağlayarak.
+```
+
+8. Function to encrypt or decrypt a text using a key that shifts the letter by the given key amount:
+
+```js
+console.log(cryptoTwo("Hello world")); // ሸጀፈፈኟዟጿኟዷፈደ
+console.log(cryptoTwo("ሸጀፈፈኟዟጿኟዷፈደ", true)); // Hello world
+console.log(cryptoTwo("Lorem Ipsum dolor sit ame.")); // ቯኟዷጀፐዟቀኧጇጯፐዟደኟፈኟዷዟጇጰጧዟዠፐጀ?
+console.log(cryptoTwo("ቯኟዷጀፐዟቀኧጇጯፐዟደኟፈኟዷዟጇጰጧዟዠፐጀ?", true)); // Lorem Ipsum dolor sit ame.
+```
+
 ## Object functions:
 
-7. Function to sort the following array of objects by a given value:
+9. Function to sort the following array of objects by a given value:
 
 ```js
 var library = [
@@ -89,14 +112,14 @@ var library = [
 }]*/
 ```
 
-8. Function to fill an array with values (numeric, string with one character) on supplied bounds:
+10. Function to fill an array with values (numeric, string with one character) on supplied bounds:
 
 ```js
 console.log(num_string_range("a", "z", 2));
 // ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
 ```
 
-9. Function to print all the properties in an JavaScript object:
+11. Function to print all the properties in an JavaScript object:
 
 ```js
 console.log(all_properties(Math));
@@ -105,7 +128,7 @@ console.log(all_properties(Array));
 ["length", "name", "prototype", "isArray", "from", "of"]
 ```
 
-10. Function to print all the methods in an JavaScript object:
+12. Function to print all the methods in an JavaScript object:
 
 ```js
 console.log(all_methods(Array));
@@ -115,7 +138,7 @@ console.log(all_methods(Math));
 
 ```
 
-11. Function to start a Clock and output every second:
+13. Function to start a Clock and output every second:
 
 ```js
 "14:37:42";

@@ -143,3 +143,61 @@ export function searchAndReplace(
 
     return text.split(regEx).join(toAdd);
 }
+
+// 7 Function to encrypt or decrypt a text using a key that shifts the letter by the given key amount:
+export function cryptoOne (text, key) {
+    let crypto = "";
+    for (let i = 0; i < text.length; i++) {
+        // Get UTF-16 code for char
+        let newChar = text.codePointAt(i);
+        // Lower case char
+        if (newChar >= 97 && newChar <= 122) {
+            newChar = newChar + key;
+            while (newChar > 122) {
+                newChar -= 26;
+            } 
+            while (newChar < 97) {
+                newChar += 26;
+            }
+        }
+        // Upper case char
+        if (newChar >= 65 && newChar <= 90) {
+            newChar = newChar + key;
+            while (newChar > 90) {
+                newChar -= 26;
+            }
+            while (newChar < 65) {
+                newChar += 26;
+            }
+        }
+        // Extended latin chars
+        if (newChar >= 192 && newChar <= 687) {
+            newChar = newChar + key;
+            while (newChar < 192) {
+                newChar -= 496;
+            }
+            while (newChar > 687) {
+                newChar += 496;
+            }
+        }
+        newChar = String.fromCodePoint(newChar);
+        crypto += newChar;
+    }
+    
+    return crypto;
+}
+
+// 8 Function to encrypt or decrypt a text using a key that shifts the letter by the given key amount:
+export function cryptoTwo(text, deSypher = false) {
+    const alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz,.!?";
+    const code = "ሀለሐመሠረሰሸቀበቨቯተቷቸቿኀነኗኘአከኸወዐዘዟዠዧየደጀገጠጨጰጸፀፈፐኍኟኧኵዷጇጧጯጷጿ ፥።፤?!";
+
+    let empty = "";
+    for (let i = 0; i < text.length; i++) {
+        deSypher
+            ? (empty += alpha[code.indexOf(text[i])])
+            : (empty += code[alpha.indexOf(text[i])]);
+    }
+
+    return empty;
+}
