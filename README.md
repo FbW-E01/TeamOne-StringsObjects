@@ -82,9 +82,17 @@ console.log(cryptoTwo("Lorem Ipsum dolor sit ame.")); // ቯኟዷጀፐዟቀ�
 console.log(cryptoTwo("ቯኟዷጀፐዟቀኧጇጯፐዟደኟፈኟዷዟጇጰጧዟዠፐጀ?", true)); // Lorem Ipsum dolor sit ame.
 ```
 
+9. Function to generate text:
+
+```js
+console.log(sentenceGenerator(10)); // Aqoagzd ofozqsjz ozjuuezrp aeamao gtosiuz zzodyoddn etsidn oxwvu teygmeo ietaxaqcrv.
+console.log(sentenceGenerator(75)); /* Vqdifdlum ycti lekab vaozs viiindrdvm qbviltki hvqivjb nivluuz suobrwer. Xhzibxf wvomtvtebft pwyluodtu cegn rpunuc. Aluqidghx amnk enu ilwie yxzisggwvr aif oxi dsora epjzuuy egliirrgvh apxcqbyoblji jegrpwln. Bifpudnwygc ezokhs qecaosz hepifh hioxzyfckdjy amadrv. Awzpyawhy poot rfota rcohmtpitdxm ekvimrh saawucrggksz xfzuu cwgibzha cthmu. 
+    Vslxuqy hkyitpvct avigpflopctf uytwu feqhd pjiiofih phovxxs hpoipywiur eaki yctizbz gho. Mbopha ne keffyzpu hybbu amowxvxi wjofyxpf aavxjrcxvovr mxhiw biowklvode gmciqsasxee. Dnon ebozjff virivjsdjb juowonugctdg tjzlua lckuu ahkiyfn. Ucxquyrcegme wzhip athoawxghcr pyrzuiy aj tooinf. */
+```
+
 ## Object functions:
 
-9. Function to sort the following array of objects by a given value:
+10. Function to sort the following array of objects by a given value:
 
 ```js
 var library = [
@@ -112,14 +120,14 @@ var library = [
 }]*/
 ```
 
-10. Function to fill an array with values (numeric, string with one character) on supplied bounds:
+11. Function to fill an array with values (numeric, string with one character) on supplied bounds:
 
 ```js
 console.log(num_string_range("a", "z", 2));
 // ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
 ```
 
-11. Function to print all the properties in an JavaScript object:
+12. Function to print all the properties in an JavaScript object:
 
 ```js
 console.log(all_properties(Math));
@@ -128,7 +136,7 @@ console.log(all_properties(Array));
 ["length", "name", "prototype", "isArray", "from", "of"]
 ```
 
-12. Function to print all the methods in an JavaScript object:
+13. Function to print all the methods in an JavaScript object:
 
 ```js
 console.log(all_methods(Array));
@@ -138,7 +146,7 @@ console.log(all_methods(Math));
 
 ```
 
-13. Function to start a Clock and output every second:
+14. Function to start a Clock and output every second:
 
 ```js
 "14:37:42";

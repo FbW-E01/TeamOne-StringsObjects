@@ -1,5 +1,4 @@
 // import functions from String.mjs
-
 import {
     truncate,
     alphabetize_string,
@@ -9,6 +8,7 @@ import {
     searchAndReplace,
     cryptoOne,
     cryptoTwo,
+    sentenceGenerator,
 } from "./String.mjs";
 
 /*
@@ -25,10 +25,10 @@ import {
 const str1 = "The quick brown fox jumps over the lazy dog";
 const str2 = "Hello World";
 
-console.log(truncate(str1)); // => "The quick brown fox jumps over the lazy…"
-console.log(truncate(str2)); // => "Hello World"
-console.log(truncate(str1, 3)); // => "The quick brown…"
-console.log(truncate(str1, 5)); // => "The quick brown fox jumps…"
+console.log(truncate(str1));
+console.log(truncate(str2)); 
+console.log(truncate(str1, 3)); 
+console.log(truncate(str1, 5));
 
 /*
  
@@ -55,10 +55,10 @@ console.log(alphabetize_string("United kingdom"));
  
 */
 
-console.log(ascii_to_hex("12")); // => 3132
-console.log(ascii_to_hex("100")); // => 313030
-console.log(ascii_to_hex("🧐")); // => 1f9d0ddd0;
-console.log("\u{1f9d0}"); // => 🧐
+console.log(ascii_to_hex("12"));
+console.log(ascii_to_hex("100"));
+console.log(ascii_to_hex("🧐"));
+console.log("\u{1f9d0}");
 
 /*
  
@@ -153,3 +153,17 @@ console.log(cryptoTwo("Hello world"));
 console.log(cryptoTwo("ሸጀፈፈኟዟጿኟዷፈደ", true));
 console.log(cryptoTwo("Lorem Ipsum dolor sit ame."));
 console.log(cryptoTwo("ቯኟዷጀፐዟቀኧጇጯፐዟደኟፈኟዷዟጇጰጧዟዠፐጀ?", true));
+
+/*
+ 
+    ___  
+   / _ \ 
+  | (_) |
+   \__, |
+     /_/ 
+         
+ 
+*/
+
+console.log(sentenceGenerator(10));
+console.log(sentenceGenerator(75));
