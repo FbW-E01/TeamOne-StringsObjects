@@ -7,34 +7,34 @@ function cryptoOne (text, key) {
         if (newChar >= 97 && newChar <= 122) {
             newChar = newChar + key;
             while (newChar > 122) {
-                newChar = newChar - 26;
+                newChar -= 26;
             } 
             while (newChar < 97) {
-                newChar = newChar + 26;
+                newChar += 26;
             }
         }
         // Upper case char
         if (newChar >= 65 && newChar <= 90) {
             newChar = newChar + key;
             while (newChar > 90) {
-                newChar = newChar - 26;
+                newChar -= 26;
             }
             while (newChar < 65) {
-                newChar = newChar + 26;
+                newChar += 26;
             }
         }
         // Char with accent
         if (newChar >= 192 && newChar <= 687) {
             newChar = newChar + key;
             while (newChar < 192) {
-                newChar = newChar - 496;
+                newChar -= 496;
             }
             while (newChar > 687) {
-                newChar = newChar + 496;
+                newChar += 496;
             }
         }
         newChar = String.fromCodePoint(newChar);
-        crypto = crypto + newChar;
+        crypto += newChar;
     }
     return crypto;
 }
