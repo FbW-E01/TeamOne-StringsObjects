@@ -23,7 +23,7 @@ function cryptoOne (text, key) {
                 newChar += 26;
             }
         }
-        // Char with accent
+        // Extended latin chars
         if (newChar >= 192 && newChar <= 687) {
             newChar = newChar + key;
             while (newChar < 192) {
