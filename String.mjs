@@ -120,7 +120,7 @@ export function searchAndReplace(
     exactWord = true
 ) {
     let regEx;
-    // Special charachter check
+    // Special character check
     let specialChar = /[!@#$€£%^&*(),.?":{}|<>]/;
 
     // If there is a special character to be found search must be case insensitive and not exact word
