@@ -9,12 +9,12 @@ import {
 } from "./Object.mjs";
 /*
  
-   _____ 
-  |___  |
-     / / 
-    / /  
-   /_/   
-         
+   _  ___  
+  / |/ _ \ 
+  | | | | |
+  | | |_| |
+  |_|\___/ 
+           
  
 */
 var library = [
@@ -32,34 +32,34 @@ console.log(sorted(library, "author"));
 console.log(sorted(library, "libraryID"));
 /*
  
-    ___  
-   ( _ ) 
-   / _ \ 
-  | (_) |
-   \___/ 
+   _   _ 
+  / | / |
+  | | | |
+  | | | |
+  |_| |_|
          
  
 */
 console.log(num_string_range("a", "z", 6));
 /*
  
-    ___  
-   / _ \ 
-  | (_) |
-   \__, |
-     /_/ 
-         
+   _ ____  
+  / |___ \ 
+  | | __) |
+  | |/ __/ 
+  |_|_____|
+           
  
 */
 console.log(all_properties(Math));
 console.log(all_properties(Array));
 /*
  
-   _  ___  
-  / |/ _ \ 
-  | | | | |
-  | | |_| |
-  |_|\___/ 
+   _ _____ 
+  / |___ / 
+  | | |_ \ 
+  | |___) |
+  |_|____/ 
            
  
 */
@@ -67,12 +67,12 @@ console.log(all_methods(Array));
 console.log(all_methods(Math));
 /*
  
-   _   _ 
-  / | / |
-  | | | |
-  | | | |
-  |_| |_|
-         
+   _ _  _   
+  / | || |  
+  | | || |_ 
+  | |__   _|
+  |_|  |_|  
+            
  
 */
 clock();
