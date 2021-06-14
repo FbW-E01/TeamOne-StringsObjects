@@ -87,10 +87,6 @@ console.log(cryptoTwo("ዄቼ")); // pX
 
 ```js
 console.log(textGenerator(10)); // Aqoagzd ofozqsjz ozjuuezrp aeamao gtosiuz zzodyoddn etsidn oxwvu teygmeo ietaxaqcrv.
-console.log(textGenerator(75)); /* 
-Vqdifdlum ycti lekab vaozs viiindrdvm qbviltki hvqivjb nivluuz suobrwer. Xhzibxf wvomtvtebft pwyluodtu cegn rpunuc. Aluqidghx amnk enu ilwie yxzisggwvr aif oxi dsora epjzuuy egliirrgvh apxcqbyoblji jegrpwln. Bifpudnwygc ezokhs qecaosz hepifh hioxzyfckdjy amadrv. Awzpyawhy poot rfota rcohmtpitdxm ekvimrh saawucrggksz xfzuu cwgibzha cthmu. 
-
-    Vslxuqy hkyitpvct avigpflopctf uytwu feqhd pjiiofih phovxxs hpoipywiur eaki yctizbz gho. Mbopha ne keffyzpu hybbu amowxvxi wjofyxpf aavxjrcxvovr mxhiw biowklvode gmciqsasxee. Dnon ebozjff virivjsdjb juowonugctdg tjzlua lckuu ahkiyfn. Ucxquyrcegme wzhip athoawxghcr pyrzuiy aj tooinf. */
 ```
 
 ## Object functions:
