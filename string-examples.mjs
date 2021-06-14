@@ -8,7 +8,7 @@ import {
     searchAndReplace,
     cryptoOne,
     cryptoTwo,
-    sentenceGenerator,
+    textGenerator,
 } from "./String.mjs";
 
 /*
@@ -168,4 +168,4 @@ console.log(cryptoTwo("ዄቼ"));
  
 */
 console.log("-----9-----");
-console.log(sentenceGenerator(180));
+console.log(textGenerator(180));

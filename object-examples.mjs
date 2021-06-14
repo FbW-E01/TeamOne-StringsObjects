@@ -40,7 +40,8 @@ console.log(sorted(library, "libraryID"));
          
  
 */
-console.log(num_string_range("a", "z", 6));
+console.log(num_string_range("a", "z", 2));
+console.log(num_string_range("a", "f", 1));
 /*
  
    _ ____  

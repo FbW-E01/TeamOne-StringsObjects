@@ -217,7 +217,7 @@ export function cryptoTwo(text) {
 }
 
 // 9 Function to generate text:
-export function sentenceGenerator(wordCount) {
+export function textGenerator(wordCount) {
     const wordGenerator = () => {
         // generate random number between 2 and 13.
         const randomNum = Math.floor(Math.random() * 11) + 2;

@@ -17,7 +17,7 @@ console.log(truncate("The quick brown fox jumps over the lazy dog", 4)); // "The
 
 ```js
 console.log(alphabetize_string("United States"));
-//"adeeinsStttU"
+//"adeeinSstttU"
 ```
 
 3. Function to convert ASCII to Hexadecimal format:
@@ -73,51 +73,52 @@ console.log(cryptoOne("Yinelea macı, sürekli dağılımı sağlayarak.", -40))
 console.log(cryptoOne("Kuzqxqm ymoĉ, eÔdqwxu pm÷ĉxĉyĉ em÷xmkmdmw.", 40)); // Yinelea macı, sürekli dağılımı sağlayarak.
 ```
 
-8. Function to encrypt or decrypt a text using a key that shifts the letter by the given key amount:
+8. Function to encrypt or decrypt a text replacing the characters with Amharic characters:
 
 ```js
-console.log(cryptoTwo("Hello world")); // ሸጀፈፈኟዟጿኟዷፈደ
-console.log(cryptoTwo("ሸጀፈፈኟዟጿኟዷፈደ", true)); // Hello world
-console.log(cryptoTwo("Lorem Ipsum dolor sit ame.")); // ቯኟዷጀፐዟቀኧጇጯፐዟደኟፈኟዷዟጇጰጧዟዠፐጀ?
-console.log(cryptoTwo("ቯኟዷጀፐዟቀኧጇጯፐዟደኟፈኟዷዟጇጰጧዟዠፐጀ?", true)); // Lorem Ipsum dolor sit ame.
+console.log(cryptoTwo("Hello World")); // ሼኘኴኴዀሀቸዀዌኴኔ
+console.log(cryptoTwo("ሼኘኴኴዀሀቸዀዌኴኔ")); // Hello World
+console.log(cryptoTwo("ሼኘኴኴዀሀቸዀዌኴኔሄ")); // Hello World!
+console.log(cryptoTwo("Lorem Ipsum dolor sit ame")); // ቌዀዌኘኸሀቀዄዐዘኸሀኔዀኴዀዌሀዐከዔሀኈኸኘ
+console.log(cryptoTwo("ዄቼ")); // pX
 ```
 
 9. Function to generate text:
 
 ```js
-console.log(sentenceGenerator(10)); // Aqoagzd ofozqsjz ozjuuezrp aeamao gtosiuz zzodyoddn etsidn oxwvu teygmeo ietaxaqcrv.
-console.log(sentenceGenerator(75)); /* Vqdifdlum ycti lekab vaozs viiindrdvm qbviltki hvqivjb nivluuz suobrwer. Xhzibxf wvomtvtebft pwyluodtu cegn rpunuc. Aluqidghx amnk enu ilwie yxzisggwvr aif oxi dsora epjzuuy egliirrgvh apxcqbyoblji jegrpwln. Bifpudnwygc ezokhs qecaosz hepifh hioxzyfckdjy amadrv. Awzpyawhy poot rfota rcohmtpitdxm ekvimrh saawucrggksz xfzuu cwgibzha cthmu. 
+console.log(textGenerator(10)); // Aqoagzd ofozqsjz ozjuuezrp aeamao gtosiuz zzodyoddn etsidn oxwvu teygmeo ietaxaqcrv.
+console.log(textGenerator(75)); /* Vqdifdlum ycti lekab vaozs viiindrdvm qbviltki hvqivjb nivluuz suobrwer. Xhzibxf wvomtvtebft pwyluodtu cegn rpunuc. Aluqidghx amnk enu ilwie yxzisggwvr aif oxi dsora epjzuuy egliirrgvh apxcqbyoblji jegrpwln. Bifpudnwygc ezokhs qecaosz hepifh hioxzyfckdjy amadrv. Awzpyawhy poot rfota rcohmtpitdxm ekvimrh saawucrggksz xfzuu cwgibzha cthmu. 
     Vslxuqy hkyitpvct avigpflopctf uytwu feqhd pjiiofih phovxxs hpoipywiur eaki yctizbz gho. Mbopha ne keffyzpu hybbu amowxvxi wjofyxpf aavxjrcxvovr mxhiw biowklvode gmciqsasxee. Dnon ebozjff virivjsdjb juowonugctdg tjzlua lckuu ahkiyfn. Ucxquyrcegme wzhip athoawxghcr pyrzuiy aj tooinf. */
 ```
 
 ## Object functions:
 
-10. Function to sort the following array of objects by a given value:
+10. Function to sort the a given array of objects by a given property value:
 
 ```js
 var library = [
   { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
   { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
-  {
-    author: "Suzanne Collins",
-    title: "Mockingjay: The Final Book of The Hunger Games",
-    libraryID: 3245,
-  },
+  { author: "Suzanne Collins", title: "Mockingjay: The Final Book of The Hunger Games", libraryID: 3245, },
 ];
-//sorted
-/*/* {
-  author: "Suzanne Collins",
-  libraryID: 3245,
-  title:"Mockingjay:The Final Book of The Hunger Games"
-}, [object Object] {
-  author: "Bill Gates",
-  libraryID: 1254,
-  title: "The Road Ahead"
-}, [object Object] {
-  author: "Steve Jobs",
-  libraryID: 4264,
-  title: "Walter Isaacson"
-}]*/
+console.log(sorted(library, "title")); 
+/*[
+  { author: 'suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245 },
+  { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254 },
+  { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264 }
+] */
+console.log(sorted(library, "author"));
+/* [
+  { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254 }, 
+  { author: 'suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245 },
+  { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264 }
+] */
+console.log(sorted(library, "libraryID"));
+/* [
+  { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254 },
+  { author: 'suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245 },
+  { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264 }
+] */
 ```
 
 11. Function to fill an array with values (numeric, string with one character) on supplied bounds:
@@ -125,6 +126,8 @@ var library = [
 ```js
 console.log(num_string_range("a", "z", 2));
 // ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
+console.log(num_string_range("a", "f", 1)); 
+// [ 'a', 'b', 'c', 'd', 'e', 'f' ]
 ```
 
 12. Function to print all the properties in an JavaScript object:
@@ -149,6 +152,7 @@ console.log(all_methods(Math));
 14. Function to start a Clock and output every second:
 
 ```js
+clock();
 "14:37:42";
 "14:37:43";
 "14:37:44";
