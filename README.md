@@ -8,7 +8,7 @@ Examples of usage are displayed in the files [**string-examples.mjs**](./string-
 1. Function to truncate a string to a certain number of words:
 
 ```js
-console.log(truncate("The quick brown fox jumps over the lazy dog", 4)); // "The quick brown fox"
+console.log(truncate("The quick brown fox jumps over the lazy dog", 4)); // "The quick brown fox…"
 ```
 
 2. Function to alphabetize a given string:
