@@ -1,8 +1,8 @@
 // 1 Function to truncate a string to a certain number of words:
 export function truncate(str, maxLength = 7) {
-    let strToArray = str.split(" ");
-    return strToArray.length > maxLength
-        ? strToArray.slice(0, maxLength).join(" ") + `…`
+    let getArray = str.split(" ");
+    return getArray.length > maxLength
+        ? getArray.slice(0, maxLength).join(" ") + `…`
         : str;
 }
 
@@ -21,14 +21,14 @@ export function alphabetize_string(string) {
 }
 
 // 3 Function to convert ASCII to Hexadecimal format:
-export function ascii_to_hex(str) {
-    let arrStorage = [];
+export function asciiToHex(str) {
+    let hexStorage = [];
     for (let i = 0; i < str.length; i++) {
         // codePointAt(0): returns the UTF16 code for the characters at position 0
-        const hex = Number(str.codePointAt(i)).toString(16);
-        arrStorage.push(hex);
+        const hex = str.codePointAt(i).toString(16);
+        hexStorage.push(hex);
     }
-    return arrStorage.join("");
+    return hexStorage.join("");
 }
 
 // 4 Function to get humanized number with the correct suffix such as 1st, 2nd, 3rd or 4th:
@@ -126,13 +126,13 @@ export function searchAndReplace(
     // If there is a special character to be found search must be case insensitive and not exact word
     if ((caseSensitive && !exactWord) || specialChar.test(toFind)) {
         regEx = toFind;
-    // Default: If case insensitive and exact word
+        // Default: If case insensitive and exact word
     } else if (!caseSensitive && exactWord) {
         regEx = new RegExp(`\\b${toFind}\\b`, "i");
-    // If case insensitive and not exact word
+        // If case insensitive and not exact word
     } else if (!caseSensitive && !exactWord) {
         regEx = new RegExp(toFind, "i");
-    // If case sensitive and exact word
+        // If case sensitive and exact word
     } else {
         regEx = new RegExp(`\\b${toFind}\\b`);
     }
@@ -145,7 +145,7 @@ export function searchAndReplace(
 }
 
 // 7 Function to encrypt or decrypt a text using a key that shifts the letter by the given key amount:
-export function cryptoOne (text, key) {
+export function cryptoOne(text, key) {
     let crypto = "";
     for (let i = 0; i < text.length; i++) {
         // Get UTF-16 code for char
@@ -155,7 +155,7 @@ export function cryptoOne (text, key) {
             newChar = newChar + key;
             while (newChar > 122) {
                 newChar -= 26;
-            } 
+            }
             while (newChar < 97) {
                 newChar += 26;
             }
@@ -183,23 +183,37 @@ export function cryptoOne (text, key) {
         newChar = String.fromCodePoint(newChar);
         crypto += newChar;
     }
-    
+
     return crypto;
 }
 
-// 8 Function to encrypt or decrypt a text using a key that shifts the letter by the given key amount:
-export function cryptoTwo(text, deSypher = false) {
-    const alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz,.!?";
-    const code = "ሀለሐመሠረሰሸቀበቨቯተቷቸቿኀነኗኘአከኸወዐዘዟዠዧየደጀገጠጨጰጸፀፈፐኍኟኧኵዷጇጧጯጷጿ ፥።፤?!";
-
-    let empty = "";
-    for (let i = 0; i < text.length; i++) {
-        deSypher
-            ? (empty += alpha[code.indexOf(text[i])])
-            : (empty += code[alpha.indexOf(text[i])]);
+// 8 Function to encrypt or decrypt a text using a key that shifts the letter by the given key amount: // FIXME:
+export function cryptoTwo(text) {
+    // Generate random english alphabets + few characters.
+    let enAlphabet = [];
+    for (let i = 32; i < 123; i++) {
+        if ((i > 39 && i < 65) || (i > 90 && i < 97)) {
+            continue;
+        } else {
+            enAlphabet.push(String.fromCharCode(i));
+        }
+    }
+    // Generate some Amharic alphabets.
+    let amAlphabet = [];
+    for (let i = 4608; i <= 4845; i += 4) {
+        amAlphabet.push(String.fromCharCode(i));
     }
 
-    return empty;
+    let string = "";
+    for (let i = 0; i < text.length; i++) {
+        //
+        const en_version = enAlphabet[amAlphabet.indexOf(text[i])];
+        const amh_version = amAlphabet[enAlphabet.indexOf(text[i])];
+
+        string += en_version || amh_version;
+    }
+
+    return string;
 }
 
 // 9 Function to generate text:
@@ -209,53 +223,56 @@ export function sentenceGenerator(wordCount) {
         const randomNum = Math.floor(Math.random() * 11) + 2;
 
         // generate an array with random length.
-        const randomLength = Array(randomNum);
+        const arrOfRandomNum = Array(randomNum);
 
         // fill the array with random number between 97 and 122
-        const ArrOfNum = randomLength
+        const randNumOfRandLen = arrOfRandomNum
             .fill()
             .map(() => Math.floor(Math.random() * 26) + 97);
 
         // converts numbers to letters
-        const ArrOfLetters = ArrOfNum.map((a) => String.fromCodePoint(a));
+        const arrOfLetters = randNumOfRandLen.map((num) =>
+            String.fromCodePoint(num)
+        );
 
         // console.log(ArrOfNum);
         let vowels = ["a", "e", "o", "i", "u"];
-        let rand = Math.floor(Math.random() * 5);
-        const randomVowels = vowels[rand];
+        let random = Math.floor(Math.random() * 5);
+        const randomVowels = vowels[random];
 
-        // check if there is a vowel if not add one at random
-        ArrOfLetters.map((l) =>
-            /[aeiou]/.test(l) ? l : ArrOfLetters.splice(rand, 1, randomVowels)
-        );
+        // check if there is a vowel if not add one random vowel at random index
+        /[aeiou]/.test(arrOfLetters)
+            ? arrOfLetters
+            : arrOfLetters.splice(random, 1, randomVowels);
 
-        return ArrOfLetters.join("");
+        return arrOfLetters.join("");
     };
 
-    let arrHolder = [];
-    // loop through the wordCount and push words into the arrHolder
+    let arrOfWords = []; // a holder, for the words to be generated.
+
+    // push the words generated into an arrOfWords
     for (let i = 0; i < wordCount; i++) {
-        arrHolder.push(wordGenerator());
+        arrOfWords.push(wordGenerator());
     }
     // generate sentences randomly
     for (
         let i = Math.floor(Math.random() * 10) + 5, counter = 1;
-        i < arrHolder.length - 1;
+        i < arrOfWords.length - 1;
         i += Math.floor(Math.random() * 10) + 5, counter++
     ) {
-        arrHolder[i] = arrHolder[i] + ".";
-        arrHolder[i + 1] =
-            arrHolder[i + 1][0].toUpperCase() + arrHolder[i + 1].slice(1);
+        arrOfWords[i] = arrOfWords[i] + ".";
+        arrOfWords[i + 1] =
+            arrOfWords[i + 1][0].toUpperCase() + arrOfWords[i + 1].slice(1);
         if (counter % 5 === 0) {
-            arrHolder.splice(i + 1, 0, "\n   ");
+            arrOfWords.splice(i + 1, 0, "\n\n\t");
         }
     }
 
-    const stringHolder = arrHolder.join(" ");
+    const getString = arrOfWords.join(" ");
 
     return (
-        stringHolder[0].toUpperCase() +
-        stringHolder.slice(1, stringHolder.length - 1) +
+        getString[0].toUpperCase() +
+        getString.slice(1, getString.length - 1) +
         "."
     );
 }
