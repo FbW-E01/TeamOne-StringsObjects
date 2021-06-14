@@ -23,8 +23,8 @@ console.log(alphabetize_string("United States"));
 3. Function to convert ASCII to Hexadecimal format:
 
 ```js
-console.log(asciiToHexa("12")); //3132
-console.log(asciiToHexa("100")); //313030
+console.log(asciiToHex("12")); //3132
+console.log(asciiToHex("100")); //313030
 ```
 
 4. Function to get humanized number with the correct suffix such as 1st, 2nd, 3rd or 4th:
