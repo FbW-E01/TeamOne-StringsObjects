@@ -52,7 +52,7 @@ let textOne = "Something Bla <h1> there, something {@} the";
 console.log(searchAndReplace(textOne, "Bla", "Bleh")); // Something Bleh <h1> there, something {@} the
 console.log(searchAndReplace(textOne, "The", "This")); // Something Bla <h1> there, something {@} This
 console.log(searchAndReplace(textOne, "The", "This", false, false)); // Something Bla <h1> Thisre, something {@} This
-console.log(searchAndReplace(textOne, "the", "This", true, true)); // Something Bla <h1> there, something {@} This
+console.log(searchAndReplace(textOne, "The", "This", true)); // Something Bla <h1> there, something {@} This
 
 let textTwo = "Something 1 £ there, something the";
 console.log(searchAndReplace(textTwo, "£", "Bleh", true, true)); // Something 1 Bleh there, something the
